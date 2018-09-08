@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Daniel Taeschler</title>
+
+        <style>
+
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background: lightgray;
+            }
+        
+            header {
+                background: black;
+            }
+
+            h1 {
+                font-size: 3em;
+                line-height: 1.2em;
+                color: rgb(126, 126, 219);
+                padding: .5em 0;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            .bio {
+                display: flex;
+                flex-flow: row nowrap;
+                padding: 2em 3em;
+            }
+
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                flex: 1 0 auto;
+            }
+
+            .bio p {
+                padding: 0 1.5em;
+                align-self: center;
+            }
+
+            .contact_info {
+                margin: 0 1em;
+                padding: 1em 3em;
+            }
+
+            .contact_info h2 {
+                padding-bottom: .25em;
+            }
+
+            .contact_links {
+                border: 1px black solid;
+                border-radius: .1em;
+            }
+
+            .contact_links {
+                padding-left: 1em;
+                list-style-position: inside;
+            }
+
+            .contact_links a {
+                color: rgb(231, 78, 103);
+            }
+
+            .contact_links a:hover {
+                color: blue;
+            }
+
+        
+        </style>
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <h1>Daniel Taeschler's Bio</h1>
+            </header>
+
+            <section class="bio">
+
+                <img src="assets/images/me_vermont_2018.jpg" alt="Daniel Taeschler on Snake Mountain in Vermont">
+
+                <p>&emsp;Daniel Taeschler is a software developer for CIT Group working on
+                    database architecture and design for Treasury IT Support. He has developed
+                    interfaces to allow for Federal reporting of the assets and well as 
+                    interfaces to allow customer trades executed with PNC to be captured in
+                    CIT systems. He is also currently learning Web Development through a 
+                    Rutgers sponsored program.
+                </p>
+
+            </section>
+
+            
+            <section class="contact_info">
+                <h2>Contact Info</h2>
+                <div class="contact_links">
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:dmtaeschler@gmail.com" target="_top">dmtaeschler@gmail.com</a></li>
+                        <li><strong>Github:</strong> <a href="https://github.com/taesch124" target="_blank">taesch124</a></li>
+                        <li><strong>Portfolio:</strong> <a href="#">coming soon!</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </div>
+    </body>
+</html>
