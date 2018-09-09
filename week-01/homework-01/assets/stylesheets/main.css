@@ -11,10 +11,30 @@ Page Styles
 
 html,
 body {
+    min-height: 100%;
     height: 100vh;
+    background: #90B4CA;
+    overflow: auto;
 }
 
-body {
+header,
+footer {
+    /*
+    background-color: #5FC0F9;
+    */
+    background-color: #200f19;
+}
+
+hr {
+    margin-bottom: .75em;
+}
+
+.row_content {
+    background: #0086D6;
+    border-radius: .5em;
+}
+
+.wrapper {
     display: flex;
     flex-flow: column nowrap;
     height: 100vh;
@@ -36,6 +56,27 @@ body {
     clear: both;
 }
 
+header,
+footer,
+.header_content,
+.footer_content,
+.row {
+    min-width: 780px;
+}
+
+.header_content,
+.footer_content,
+.row {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+.full-grid-width {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+
 
 
 /*
@@ -44,20 +85,57 @@ Typography
 =============================================
 */
 
+h1,
+h2,
+h3 {
+    font-family: 'Bangers', cursive;
+}
+
+p,
+h9,
+ {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input,
+textarea,
+nav li a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 h1 {
-    border-top: .15em solid black;
-    font-size: 4em;
-    line-height: 1.2em;
+    border-top: .15em solid #295a4e;
+    font-size: 3.5em;
+    line-height: 1em;
+    color: #295a4e;
 }
 
 h2 {
     font-size: 1.5em;
     line-height: 1.1em;
-    color: #114B5F;
+    letter-spacing: 3px;
+    font-weight: normal;
+    color: #00DD6D;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #200f19;
+    font-weight: bold;
+}
+
+label,
+p,
+h9 {
+    line-height: 1.3em;
+    color: #47d4b8; 
+}
+
+label {
+    font-weight: bold;
 }
 
 nav li a {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.7em;
     color: #EFE9F4;
     text-decoration: none;
@@ -65,7 +143,7 @@ nav li a {
 }
 
 nav li a:hover {
-    color: #605B56;
+    color: #2cb79c;
 }
 
 
@@ -79,7 +157,9 @@ Header
 */
 
 header {
-    background-color: #5FBFF9;
+    position: sticky;
+    top: 0;
+    z-index: 1000000;
 }
 
 .header_content {
@@ -90,10 +170,12 @@ header {
 }
 
 header h1 {
-    margin: 0 1em 0 2em;
+    margin: 0 1em;
+    padding: 0 .25em;
 }
 
 nav {
+    min-width: 350px;
     height: fit-content;
     align-self: flex-end;
 }
@@ -106,7 +188,7 @@ nav ul {
 
 nav li {
     display: inline-block;
-    padding-right: .5em;
+    padding-right: .75em;
 }
 
 
@@ -119,9 +201,9 @@ Footer
 */
 
 footer {
-    background-color: #5FBFF9;
     display: flex;
     flex-flow: column nowrap;
+    min-height: 90px;
     height: 10vh;
     justify-content: center;
     justify-self: end;
@@ -130,5 +212,9 @@ footer {
 footer,
 .footer_content {
     width: 100%;
+    text-align: center;
 }
+
+
+
 
