@@ -9,6 +9,7 @@ hr {
 }
 
 .about_me {
+    margin-left: 2em;
     position: relative;
     min-height: fit-content;
     height: fit-content;
