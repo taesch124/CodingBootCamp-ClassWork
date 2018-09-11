@@ -38,6 +38,16 @@ button:hover {
     background-color: red;
 }
 
+button:active {
+    background-color: rgb(7, 122, 64);
+    transition: none;
+}
+
+#clear_button button:active {
+    background-color: rgb(155, 25, 25);
+    transition: none;
+}
+
 input,
 textarea,
 button {

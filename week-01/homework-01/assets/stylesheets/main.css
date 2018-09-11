@@ -13,8 +13,16 @@ html,
 body {
     min-height: 100%;
     height: 100vh;
-    background: #90B4CA;
+    background: #9E9E9E;
     overflow: auto;
+}
+
+header {
+    box-shadow: 0 3px 3px #474545;
+}
+
+footer {
+    box-shadow: 0 -3px 3px #474545;
 }
 
 header,
@@ -22,15 +30,16 @@ footer {
     /*
     background-color: #5FC0F9;
     */
-    background-color: #200f19;
+    background-color: #1976D2;
 }
 
 hr {
     margin-bottom: .75em;
+    border-color: #BDBDBD;
 }
 
 .row_content {
-    background: #0086D6;
+    background: #2196F3;
     border-radius: .5em;
 }
 
@@ -104,10 +113,10 @@ nav li a {
 }
 
 h1 {
-    border-top: .15em solid #295a4e;
+    border-top: .15em solid #212121;
     font-size: 3.5em;
     line-height: 1em;
-    color: #295a4e;
+    color: #212121;
 }
 
 h2 {
@@ -115,12 +124,12 @@ h2 {
     line-height: 1.1em;
     letter-spacing: 3px;
     font-weight: normal;
-    color: #00DD6D;
+    color: #FFFFFF;
 }
 
 h3 {
     font-size: 1.2em;
-    color: #200f19;
+    color: #757575;
     font-weight: bold;
 }
 
@@ -128,7 +137,7 @@ label,
 p,
 h9 {
     line-height: 1.3em;
-    color: #47d4b8; 
+    color: #FFFFFF; 
 }
 
 label {
@@ -137,13 +146,13 @@ label {
 
 nav li a {
     font-size: 1.7em;
-    color: #EFE9F4;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
 }
 
 nav li a:hover {
-    color: #2cb79c;
+    color: #9E9E9E;
 }
 
 
