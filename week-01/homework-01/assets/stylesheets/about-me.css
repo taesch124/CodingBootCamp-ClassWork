@@ -12,6 +12,7 @@ hr {
     position: relative;
     min-height: fit-content;
     height: fit-content;
+    margin-left: 2em;
 }
 
 #about_me_content {
