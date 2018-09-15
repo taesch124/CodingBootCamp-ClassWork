@@ -1,0 +1,217 @@
+/*
+=============================================
+Page Styles
+=============================================
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+    background: #9E9E9E;
+}
+
+.navbar {
+    box-shadow: 0 3px 3px #474545;
+}
+
+.navbar,
+footer {
+    background-color: #1976D2;
+}
+
+.card {
+    background: #2196F3;
+    padding: 42px 24px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    height: fit-content;
+    flex: 0 0 auto;
+}
+
+.navbar-toggler {
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin: 100px 0; 
+    flex: 1 0 auto;
+}
+footer {
+    flex: 0 0 auto;
+    padding: 24px 0;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+
+
+
+
+/*
+=============================================
+Typography
+=============================================
+*/
+
+h1,
+h2,
+h3 {
+    font-family: 'Bangers', cursive;
+}
+
+p,
+h9,
+ {
+    font-family: 'Montserrat', sans-serif;
+}
+
+input,
+textarea,
+ a {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.logo,
+h1 {
+    border-top: .15em solid #212121;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #212121;
+}
+
+h2 {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    letter-spacing: 3px;
+    font-weight: normal;
+    color: #FFFFFF;
+    border-bottom: 2px solid #BDBDBD;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #757575;
+    font-weight: bold;
+}
+
+label,
+p,
+h9 {
+    line-height: 1.3em;
+    color: #FFFFFF; 
+}
+
+p:last-child {
+    margin-bottom:0; 
+}
+
+label {
+    font-weight: bold;
+}
+
+a {
+    font-size: 1.05em;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #9E9E9E;
+}
+
+nav li a {
+    font-size: 1.7em;
+    color: #FFFFFF;
+}
+
+nav li a:hover {
+    color: #9E9E9E;
+}
+
+
+/*
+=============================================
+About Me
+=============================================
+*/
+
+
+#portrait {
+    min-width: 240px;
+    width: 10vh;
+    height: auto;
+    margin-right: 24px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+} 
+
+
+
+
+
+/*
+=============================================
+Portfolio
+=============================================
+*/
+
+.thumbnail {
+    position: relative;
+    margin: 12px;
+    width: 100%;
+}
+
+.caption {
+    background: #BBDEFB;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    width: 100%;
+    max-width: 210px;
+    transform: translate(-50%);
+    padding: 0 12px;
+}
+
+.caption h3 {
+    margin: 0;
+}
+
+
+
+
+
+/*
+=============================================
+Contact Me
+=============================================
+*/
+
+.btn-danger {
+    margin-bottom: 12px;
+}
+
+.form-prompt {
+    margin-bottom: 24px !important; 
+}
+
+
+
+
+
