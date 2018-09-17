@@ -1,0 +1,65 @@
+/*
+=============================================
+About Me
+=============================================
+*/
+
+#portrait {
+    min-width: 240px;
+    width: 10vh;
+    height: auto;
+    margin: 0 1.5em .75em 0;
+    border-radius: 5px;
+}
+
+.bio {
+    padding: 0 1.5em .5em 1.5em;
+}
+
+
+
+@media screen and (min-width: 769px) {
+
+    .about_me {
+        position: relative;
+        min-height: fit-content;
+        height: fit-content;
+    }
+
+    #about_me_header {
+        padding-top: 2em;
+    }
+
+    #portrait {
+        float: left;
+    }
+
+    .bio {
+        padding-left: 4.5em;
+    }
+
+    #about_me_content {
+        position: relative;
+        top: -1.5em;
+        bottom: 0;  
+        left: -2em;
+        right: 0;
+        height: fit-content;
+    }
+
+}
+
+@media screen  and (max-width: 768px) {
+
+    .about_me {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #portrait {
+        min-width: 120px;
+        width: 50%;
+        align-self: center;
+        margin: 1.25em 25% .75em 25%;
+    }
+}

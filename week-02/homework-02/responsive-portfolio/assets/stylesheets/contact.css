@@ -1,0 +1,146 @@
+/*
+=============================================
+Contact
+=============================================
+*/
+
+p {
+    text-align: center;
+}
+
+input,
+textarea,
+button {
+    background-color: transparent; /* Remove background fill */
+    border-radius: 0; /* Remove corner curve */
+    border: 2px solid #fff; /* 2px white border */
+    border-radius: .75em;
+    color: #fff; /* White text */
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid #00DD6D;
+    transition: border-color .2s ease-in-out 0s;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    border: 2px solid #00DD6D;
+    box-shadow: 0 0 0 30px #0086D6 inset;
+    -webkit-box-shadow: 0 0 0 30px #0086D6 inset;
+    -webkit-text-fill-color: #fff;
+    transition: border-color .2s ease-in-out 0s;
+}
+
+button:hover {
+    background-color: #00DD6D;
+    transition: background-color .1s ease-in-out .1s;
+}
+
+#clear_button button:hover {
+    background-color: red;
+}
+
+button:active {
+    background-color: rgb(7, 122, 64);
+    transition: none;
+}
+
+#clear_button button:active {
+    background-color: rgb(155, 25, 25);
+    transition: none;
+}
+
+input,
+textarea,
+button {
+    display: block;
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+#contact_me_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    grid-gap: 3vh 2vw;
+    padding: 1em;
+}
+
+#person_info,
+#message {
+    width: 100%;
+    padding: 0 2.5em;
+}
+
+#clear_button,
+#submit_button {
+    width: 25%;
+    max-width: 120px;
+}
+
+#clear_button button,
+#submit_button button {
+    padding: .66em;
+}
+
+textarea {
+    resize: none;
+    overflow: auto;
+}
+
+.form_buttons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-top: 1em;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    #contact_me_form {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    #clear_button,
+    #submit_button {
+        align-self: center;
+    }
+    
+}
+
+@media screen and (max-width: 640px) {
+    p {
+        margin: 0 1.5em;
+        text-align: justify;
+    }
+
+    #clear_button,
+    #submit_button {
+        align-self: center;
+    }
+
+    #submit_button {
+        margin-top: 1em;
+    }
+
+    
+}
+
+@media screen and (max-width: 420px) {
+    .form_buttons {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        margin-top: 1.5em;
+    }
+}
