@@ -10,34 +10,48 @@ body {
     background-color: black; 
 }
 
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 
-.game-name,
+
 .game-text {
     text-align: center;
      
 }
 
-.game-name {
-    background-color: black;
+.game-screen {
+    position: relative;
+    width: 100%;
+    max-width: 60vw;
+    height: auto;
 }
 
-.game-screen {
-    background-image: url(./../images/game-screen-background.png);
-    background-size: contain;
-    background-repeat: no-repeat;
+@media screen and (max-width: 640px) {
+
+    .game-screen {
+        max-width: 100%;
+    }
+}
+
+#background {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    max-width: 1240px;
-    height: 0;
-    padding-top: 66.64%;
-    position: relative;
+    height: auto;
+    max-height: 100vh;
 }
 
 .game-text {
     position: absolute;
-    width: 33%;
-    top: 45%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 40%;
 }
 
 
@@ -61,8 +75,8 @@ h2 {
 }
 
 p {
-    font-size: 1.2rem;
-    line-height: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.25 rem;
     font-weight: bold;
     color: white;
 }
