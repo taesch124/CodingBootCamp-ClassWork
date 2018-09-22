@@ -1,0 +1,72 @@
+/*
+=============================================
+Page Styles
+=============================================
+*/
+
+html,
+body {
+    font-size: 18px;
+    background-color: black; 
+}
+
+
+.game-name,
+.game-text {
+    text-align: center;
+     
+}
+
+.game-name {
+    background-color: black;
+}
+
+.game-screen {
+    background-image: url(./../images/game-screen-background.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 1240px;
+    height: 0;
+    padding-top: 66.64%;
+    position: relative;
+}
+
+.game-text {
+    position: absolute;
+    width: 33%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+/*
+=============================================
+Typograpghy
+=============================================
+*/
+
+h1, h2, h3, h4, p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    font-size: 3.5rem;
+    line-height: 7rem;
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+#current-word {
+    letter-spacing: .5rem;
+}
