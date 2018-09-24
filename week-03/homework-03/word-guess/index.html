@@ -12,17 +12,23 @@
         <div class="wrapper">
             
             <div class="game-screen">
+                <h2 id="header">Video Game</h2>
                 <img id="background" src="./assets/images/arcade-game-background.jpg">
                 <div class="game-text">
-                    <p>Press any key to get started!</p>
-                    <br>
-                    <p>Current Word: <br><span id="current-word"></span></p>
-                    <br>
-                    <p>Guesses Left: <span id="guesses-left-text"></span></p>
-                    <p>Guessed letters: <span id="guessed-letters-text"></span></p>
-                    <br>
-                    <p>Wins: <span id="win-text">0</span></p>
-                    <p>Losses: <span id="lose-text">0</span></p>
+                    <div id="game-play-text">
+                        <p>Press any key to get started!</p>
+                        <br>
+                        <p>Current Word: <br><span id="current-word"></span></p>
+                        <br>
+                        <p>Guesses Left: <span id="guesses-left-text"></span></p>
+                        <p>Guessed letters: <span id="guessed-letters-text"></span></p>
+                        <br>
+                        <p>Wins: <span id="win-text">0</span></p>
+                        <p>Losses: <span id="lose-text">0</span></p>
+                    </div>
+                    <div id="game-end-container" class="hidden">
+                        <p id="game-end-text"></p>
+                    </div>
                 </div>
             </div>
             
@@ -30,5 +36,6 @@
         </div>
 
         <script src="./assets/scripts/game-logic.js"></script>
+        <script src="./assets/scripts/text-positioning.js"></script>
     </body> 
 </html>

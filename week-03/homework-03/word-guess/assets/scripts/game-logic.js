@@ -3,6 +3,9 @@ const winsText = document.getElementById("win-text");
 const loseText = document.getElementById("lose-text");
 const guessesLeftText = document.getElementById("guesses-left-text");
 const guessedLettersText = document.getElementById('guessed-letters-text');
+const gameEndContainer = document.getElementById('game-end-container');
+const gamePlayText = document.getElementById('game-play-text');
+const gameEndText = document.getElementById('game-end-text');
 /*
 1. Generate Random Letter
 2. User guesses letter
@@ -20,35 +23,40 @@ let guessesLeft = 10;
 guessesLeftText.innerHTML = guessesLeft;
 let guessedLetters = [];
 var currentGame = generateRandomGame();
+var gameOver = false;
 
 document.onkeyup = function(event) {
-    let userGuess = event.key;
-    if (guessedLetters.indexOf(userGuess) !== -1 || possibleLetters.indexOf(userGuess) === -1) return;
+    if(!gameOver) {
+        let userGuess = event.key;
+        if (guessedLetters.indexOf(userGuess) !== -1 || possibleLetters.indexOf(userGuess) === -1) return;
 
-    if(!checkGameForLetter(userGuess)) {
-        guessedLetters.push(userGuess);
-        guessedLettersText.innerHTML = printGuessedLetters(guessedLetters);
-        guessesLeft--;
-        guessesLeftText.innerHTML = guessesLeft;
-        
-        if(guessesLeft <= 0) {
-            losses++;
-            loseText.innerHTML = losses;
+        if(!checkGameForLetter(userGuess)) {
+            guessedLetters.push(userGuess);
+            guessedLettersText.innerHTML = printGuessedLetters(guessedLetters);
+            guessesLeft--;
+            guessesLeftText.innerHTML = guessesLeft;
+            
+            if(guessesLeft <= 0) {
+                losses++;
+                loseText.innerHTML = losses;
+                setTimeout(function() {
+                    gameWon(false);
+                }, 0);
+            }
+        }
+
+        if(visibleLettersText.innerHTML.indexOf("_") === -1) {
+            wins++;
+            winsText.innerHTML = wins;
             setTimeout(function() {
-                alert("Sorry, I was thinkng of " + currentGame + ". :(");
-                resetGame();
+                gameWon(true); 
             }, 0);
         }
+    } else {
+        gameOver = false;
+        resetGame();
     }
-
-    if(visibleLettersText.innerHTML.indexOf("_") === -1) {
-        wins++;
-        winsText.innerHTML = wins;
-        setTimeout(function() {
-            alert("That's right! I was thinking of " + currentGame + "!");
-            resetGame();    
-        }, 0);
-    }
+    
 }
 
 function generateRandomGame() {
@@ -61,7 +69,6 @@ function generateRandomGame() {
 
     let visibleLetters = game.replace(/[a-zA-Z]/gi, "_");
     visibleLettersText.innerHTML = visibleLetters;
-    console.log(game);
     return game;
 }
 
@@ -71,6 +78,9 @@ function resetGame() {
     guessedLetters = [];
     guessedLettersText.innerHTML = "";
     currentGame = generateRandomGame();
+
+    gameEndContainer.classList.add('hidden');
+    gamePlayText.classList.remove('hidden');
 }
 
 function printGuessedLetters(letters) {
@@ -100,4 +110,19 @@ function checkGameForLetter(userGuess) {
     }
 
     return containsLetter;
+}
+
+function gameWon(gameWon) {
+
+    gameEndContainer.classList.remove('hidden');
+    gamePlayText.classList.add('hidden');
+
+    if(gameWon) {
+        gameEndText.innerHTML = "That's right! I was thinking of " + currentGame + "!";
+    } else {
+        gameEndText.innerHTML = "Sorry, I was thinking of " + currentGame + ". :(";
+    }
+
+    gameEndText.innerHTML += "<br><br>Press any key to play again.";
+    gameOver = true;
 }
