@@ -22,13 +22,14 @@ losses = 0;
 let guessesLeft = 10;
 guessesLeftText.innerHTML = guessesLeft;
 let guessedLetters = [];
+let correctLetters = [];
 var currentGame = generateRandomGame();
 var gameOver = false;
 
 document.onkeyup = function(event) {
     if(!gameOver) {
         let userGuess = event.key;
-        if (guessedLetters.indexOf(userGuess) !== -1 || possibleLetters.indexOf(userGuess) === -1) return;
+        if (correctLetters.indexOf(userGuess) !== -1 || guessedLetters.indexOf(userGuess) !== -1 || possibleLetters.indexOf(userGuess) === -1) return;
 
         if(!checkGameForLetter(userGuess)) {
             guessedLetters.push(userGuess);
@@ -39,18 +40,14 @@ document.onkeyup = function(event) {
             if(guessesLeft <= 0) {
                 losses++;
                 loseText.innerHTML = losses;
-                setTimeout(function() {
-                    gameWon(false);
-                }, 0);
+                gameWon(false);
             }
         }
 
         if(visibleLettersText.innerHTML.indexOf("_") === -1) {
             wins++;
             winsText.innerHTML = wins;
-            setTimeout(function() {
-                gameWon(true); 
-            }, 0);
+            gameWon(true); 
         }
     } else {
         gameOver = false;
@@ -60,10 +57,10 @@ document.onkeyup = function(event) {
 }
 
 function generateRandomGame() {
-    let randomIndex = Math.floor(Math.random() * possibleGames.length);
     let game = currentGame;
 
     while(game === currentGame) {
+        let randomIndex = Math.floor(Math.random() * possibleGames.length);
         game = possibleGames[randomIndex];
     }
 
@@ -76,6 +73,7 @@ function resetGame() {
     guessesLeft = 10;
     guessesLeftText.innerHTML = guessesLeft;
     guessedLetters = [];
+    correctLetters = [];
     guessedLettersText.innerHTML = "";
     currentGame = generateRandomGame();
 
@@ -107,6 +105,10 @@ function checkGameForLetter(userGuess) {
             let visibleLetters = replaceAt(visibleLettersText.innerHTML, i, userGuess.toUpperCase());
             visibleLettersText.innerHTML = visibleLetters;
         }
+    }
+
+    if(containsLetter) {
+        correctLetters.push(userGuess);
     }
 
     return containsLetter;
